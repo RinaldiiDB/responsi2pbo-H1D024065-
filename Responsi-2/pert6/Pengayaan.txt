@@ -1,0 +1,32 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa itu abstract class dan Kenapa kita membutuhkan Abstarct class?
+2. Apa perbedaan utama antara abstract class dan class biasa dalam pemrograman berorientasi objek? 
+3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
+4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
+5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe
+abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+
+Jawaban:
+
+1. Abstract class adalah kelas dasar yang tidak bisa dibuat objek langsung dan dipakai untuk menjadi “kerangka atau
+kontrak” bagi kelas-kelas turunannya. Kita membutuhkannya supaya semua subclass memiliki aturan dan struktur yang sama,
+sehingga program lebih rapi dan mudah diatur.
+
+2. Perbedaan utama adalah abstract class tidak dapat diinstansiasi dan boleh memiliki abstract method (tanpa isi),
+sedangkan class biasa bisa dibuat objeknya dan semua methodnya harus memiliki implementasi.
+Abstract class berfungsi sebagai template umum, sementara class biasa berisi implementasi lengkap yang siap digunakan.
+
+3. Subclass wajib mengimplementasikan abstract method karena method itu hanya berupa deklarasi tanpa isi,
+sehingga subclass harus memberikan perilaku nyata agar objek yang dibuat memiliki fungsi yang lengkap. Jika tidak
+diimplementasikan, subclass tidak akan memiliki definisi jelas atas perilaku tersebut.
+
+4. Abstract method tidak boleh memiliki isi karena tujuannya hanya mendefinisikan apa yang harus dilakukan,
+bukan bagaimana melakukannya. Implementasinya harus diserahkan kepada subclass agar masing-masing dapat menentukan
+perilaku sesuai kebutuhan spesifiknya.
+
+5. Abstract class mendukung polimorfisme karena referensi bertipe abstract class dapat menunjuk ke objek dari berbagai
+subclass, dan saat method dipanggil, yang dijalankan adalah versi method milik subclass tersebut. Dengan mekanisme ini,
+objek berbeda dapat merespons perintah yang sama dengan cara yang berbeda sesuai implementasinya.

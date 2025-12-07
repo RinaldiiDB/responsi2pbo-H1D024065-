@@ -1,0 +1,25 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa fungsi keyword 'extends' dalam deklarasi class Java?
+2. Jelaskan perbedaan antara Method Overloading (yang ada di latihan sebelumnya) dengan Method Overriding (yang ada di latihan ini)!
+3. Apa kegunaan keyword 'super' di dalam constructor subclass (Manajer)?
+4. Jika variabel di class Karyawan diubah access modifier-nya menjadi 'private', apa yang akan terjadi pada class Manajer? Bagaimana solusinya?
+5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
+
+Jawaban:
+
+1. Keyword extends digunakan untuk membuat sebuah class mewarisi class parent, sehingga child class memperoleh seluruh atribut dan method dari parent. Dengan pewarisan
+ child class dapat langsung menggunakan fitur parent tanpa menulis ulang kode,juga dapat memodifikasi perilaku yang sudah ada.
+
+2. Method Overloading terjadi ketika dua atau lebih method memiliki nama yang sama dalam satu class, tetapi parameternya berbeda sehingga fungsinya adalah menyediakan beberapa cara pemanggilan.
+ Sedangkan Method Overriding terjadi dalam inheritance, yaitu chihld class menulis ulang method milik parent class dengan nama, parameter, dan return yang sama untuk menyesuaikan perilakunya.
+
+3. Keyword super digunakan untuk memanggil constructor milik parent class agar atribut dasar yang berada di parent (seperti nama dan gaji pokok) dapat diinisialisasi dengan benar ketika objek subclass dibuat.
+Dengan super, subclass tetap mengikuti struktur inisialisasi yang telah ditentukan oleh parent class.
+
+4. Jika variabel dalam class Karyawan bersifat private, maka class Manajer tidak dapat mengaksesnya secara langsung karena akses private membatasi penggunaan hanya di dalam class itu sendiri.
+ Solusinya adalah menyediakan method getter di superclass untuk memberikan akses untuk subclass, sehingga subclass dapat membaca nilai variabel.
+
+5. Inheritance digunakan untuk menghindari duplikasi kode, membuat struktur program lebih teratur, dan efisiensi karena fitur yang sama tidak perlu ditulis ulang di class berbeda.
+Dengan inheritance, class yang memiliki hubungan hierarki (misalnya Manajer adalah Karyawan) dapat berbagi atribut dan method secara otomatis, sehingga kode lebih efisien dan sesuai dgn konsep polymorphism.

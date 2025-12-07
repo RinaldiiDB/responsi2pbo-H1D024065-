@@ -1,0 +1,44 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa perbedaan antara interface dengan class biasa?
+2. Mengapa interface tidak memiliki implementasi method di dalamnya?
+3. Apa tujuan penggunaan keyword "implements" pada sebuah class?
+4. Apakah sebuah class dapat mengimplementasikan lebih dari satu interface? Jelaskan dan berikan contoh sederhana.
+5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan
+semua method dari interface tersebut?
+
+Jawaban:
+
+1. Interface hanya berisi deklarasi method tanpa implementasi logika di dalamnya, sedangkan class biasa berisi atribut
+dan implementasi method. Interface digunakan sebagai “kontrak” yang harus dipenuhi oleh class yang mengimplementasikannya,
+sementara class biasa dapat langsung digunakan untuk membuat objek.
+
+2. Karena tujuan interface adalah mendefinisikan standar atau aturan yang harus diikuti oleh class lain.
+Interface tidak fokus pada cara kerja suatu method, tetapi menentukan apa saja method yang wajib tersedia.
+Dengan begitu, detail implementasi diberikan kepada class yang mengimplementasikannya.
+
+3. Keywords implements digunakan untuk menunjukkan bahwa sebuah class memenuhi kontrak yang ada pada interface.
+Artinya class tersebut harus menyediakan implementasi untuk semua method yang dideklarasikan di dalam interface.
+
+4. Ya, sebuah class dapat mengimplementasikan lebih dari satu interface.  Multiple inheritance dapat dilakukan
+melalui interface sehingga satu class dapat mengikuti beberapa aturan sekaligus.
+contoh:
+        interface A {
+            void methodA();
+        }
+        interface B {
+            void methodB();
+        }
+        class Demo implements A, B {
+            public void methodA() {
+                System.out.println("Ini methodA");
+            }
+            public void methodB() {
+                System.out.println("Ini methodB");
+            }
+        }
+
+5. Class tersebut harus dijadikan abstract. Jika tetap class biasa dan tidak mengimplementasikan semua method
+dari interface, maka akan terjadi error. Hal ini karena Java memastikan bahwa semua method dari interface benar-benar
+tersedia sebelum objek class tersebut bisa dibuat.
