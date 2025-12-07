@@ -1,4 +1,4 @@
-Responsi 2 - Praktikum Pemrograman Berorientasi Objek
+**Responsi 2 - Praktikum Pemrograman Berorientasi Objek**
 
 
 Dibuat oleh: Rinaldi Dasa Bahtiar
