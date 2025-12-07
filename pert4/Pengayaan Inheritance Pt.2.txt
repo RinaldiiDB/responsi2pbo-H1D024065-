@@ -1,0 +1,33 @@
+[PERTANYAAN PENGAYAAN]
+
+1. Mengapa constructor di class Member wajib memanggil constructor Customer menggunakan super(...)?
+
+2. Apa tujuan memanggil super.tampilkanInfo() saat melakukan overriding method di subclass?
+
+3. Berikan contoh kondisi di mana pemanggilan super.method() sangat penting dalam pewarisan.
+
+4. Bagaimana keyword super membantu membedakan atribut yang memiliki nama sama antara parent dan child?
+
+5. Mengapa pendekatan inheritance lebih efisien dibanding menyalin ulang seluruh atribut dan method ke dalam class Member?
+
+Jawaban:
+
+1. Karena subclass tidak mewarisi constructor, maka data yang dimiliki parent (nama, ID, total belanja) harus diinisialisasi oleh constructor parent.
+ Dengan memanggil super(...) atribut-atribut Customer dapat dibuat dengan benar, sehingga objek Member terbentuk secara lengkap dan valid.
+ Tanpa super(...), atribut dari parent tidak akan terisi.
+
+2. Tujuannya agar method parent tetap dijalankan sebelum menambahkan perilaku baru di subclass.
+Sepertri contohnya Member tetap harus menampilkan nama, ID, dan total belanja, sehingga subclass cukup memanggil super.tampilkanInfo()
+dan kemudian mencetak data tambahan seperti poin dan level.
+
+3. Saat membuat subclass PremiumAccount yang mewarisi Account, di mana method hitungSaldo() dari parent sudah menghitung saldo dasar.
+Jika subclass menambahkan bonus saldo, maka harus memanggil super.hitungSaldo() agar perhitungan dasar tidak hilang.
+Tanpa memanggil super, logika parent akan terabaikan dan hasil perhitungan menjadi salah.
+
+4. Jika parent dan child memiliki atribut dengan nama sama (misal name), maka super.name digunakan untuk mengakses milik parent,
+sedangkan this.name mengakses milik subclass. Keyword super agar Java tahu kita ingin mengambil versi atribut yang berada di parent class,
+ bukan milik object subclass.
+
+5. Karena inheritance mencegah duplikasi kode, efisiensi pemeliharaan, dan memungkinkan perbaikan dilakukan di satu tempat (parent class).
+ Jika atribut atau method berubah, cukup ubah class Customer saja dan seluruh subclass otomatis ikut terupdate.
+ membuat lebih efisien dibanding nyalin ulang kode yang sama ke class Member, yang berpotensi menyebabkan error.
